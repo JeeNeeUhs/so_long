@@ -14,6 +14,30 @@ void draw_image_to_cell(void *mlx, void *window, void *image, int i, int j, int 
     mlx_put_image_to_window(mlx, window, image, x, y); // Resmi belirtilen kareye yerleştir
 }
 
+void draw_transparent_image(void *mlx, void *win, void *img, int x, int y, int square_size)
+{
+    char *data;
+    int bpp, size_line, endian;
+    int i, j;
+    int *pixel;
+
+    x *= square_size;
+    y *= square_size;
+
+    data = mlx_get_data_addr(img, &bpp, &size_line, &endian);
+    for (j = 0; j < square_size; j++)
+    {
+        for (i = 0; i < square_size; i++)
+        {
+            pixel = (int *)(data + (j * size_line + i * (bpp / 8)));
+            if ((*pixel & 0xFF000000) != 0xFF000000) // Siyah dışındaki piksel (şeffaflık varsayımı)
+            {
+                mlx_pixel_put(mlx, win, x + i, y + j - 20, *pixel);
+            }
+        }
+    }
+}
+
 int main()
 {
     int square_size = 100; // Her karenin boyutu (piksel)
@@ -59,7 +83,7 @@ int main()
 
     // Resimleri yükleme
     int img_width, img_height;
-    void *tile = mlx_xpm_file_to_image(mlx, "tile.xpm", &img_width, &img_height);
+    void *tile = mlx_xpm_file_to_image(mlx, "greensea.xpm", &img_width, &img_height);
     if (!tile)
     {
         printf("Tile resmi yüklenemedi! Lütfen 'tile.xpm' dosyasını kontrol edin.\n");
@@ -101,14 +125,29 @@ int main()
             else if (line[j] == '0') // Zemin
                 draw_image_to_cell(mlx, window, tile, i, j, square_size);
             else if (line[j] == 'P') // Karakter
-                draw_image_to_cell(mlx, window, character, i, j, square_size);
+            {
+                draw_image_to_cell(mlx, window, tile, i, j, square_size);
+                draw_transparent_image(mlx, window, character, i, j, square_size);
+            }
+            else if (line[j] == 'E') // Çıkış
+            {
+                draw_image_to_cell(mlx, window, tile, i, j, square_size);
+            }
+            else if (line[j] == 'C') // Kasa
+            {
+                draw_image_to_cell(mlx, window, tile, i, j, square_size);
+            }
         }
         free(line);
     }
     close(file);
 
+    // draw_transparent_image(mlx, window, character, 3, 3, square_size);
+
     // Pencereyi açık tut
     mlx_loop(mlx);
+
+
 
     return 0;
 }
