@@ -6,7 +6,7 @@
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:39:54 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/19 17:40:08 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/19 18:23:58 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,22 @@ int	check_wall(t_data *data, char dir)
 {
 	if (dir == 'd')
 	{
-		if (data->map[data->y][data->x + 1] != '1')
+		if (data->map[data->y][data->x + 1] == '0')
 			return (1);
 	}
 	else if (dir == 'a')
 	{
-		if (data->map[data->y][data->x - 1] != '1')
+		if (data->map[data->y][data->x - 1] == '0')
 			return (1);
 	}
 	else if (dir == 'w')
 	{
-		if (data->map[data->y - 1][data->x] != '1')
+		if (data->map[data->y - 1][data->x] == '0')
 			return (1);
 	}
 	else if (dir == 's')
 	{
-		if (data->map[data->y + 1][data->x] != '1')
+		if (data->map[data->y + 1][data->x] == '0')
 			return (1);
 	}
 	return (0);

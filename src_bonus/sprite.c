@@ -6,7 +6,7 @@
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:42:19 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/19 18:12:18 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/19 18:37:34 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 void	enemy_sprite(t_data *data, int x, int y)
 {
+	int random;
+
 	if (data->map[y][x] == '4')
 	{
 		draw_image_to_cell(data, data->enemy[1], x, y);
@@ -28,7 +30,16 @@ void	enemy_sprite(t_data *data, int x, int y)
 	else if (data->map[y][x] == '6')
 	{
 		draw_image_to_cell(data, data->enemy[3], x, y);
-		data->map[y][x] = '7';
+		random = rand() % 4;
+		if (random == 0)
+			move_enemy(data, 'w', x, y);
+		else if (random == 1)
+			move_enemy(data, 'a', x, y);
+		else if (random == 2)
+			move_enemy(data, 's', x, y);
+		else if (random == 3)
+			move_enemy(data, 'd', x, y);
+		// data->map[y][x] = '7';
 	}
 	else if (data->map[y][x] == '7')
 	{
@@ -41,7 +52,7 @@ void	enemy_sprite(t_data *data, int x, int y)
 
 void	enemy_sprite2(t_data *data, int x, int y)
 {
-	int	random;
+	// int	random;
 
 	if (data->map[y][x] == '8')
 	{
@@ -51,17 +62,7 @@ void	enemy_sprite2(t_data *data, int x, int y)
 	else if (data->map[y][x] == '9')
 	{
 		draw_image_to_cell(data, data->enemy[0], x, y);
-		random = rand() % 4;
-		if (random == 0)
-			move_enemy(data, 'w', x, y);
-		else if (random == 1)
-			move_enemy(data, 'a', x, y);
-		else if (random == 2)
-			move_enemy(data, 's', x, y);
-		else if (random == 3)
-			move_enemy(data, 'd', x, y);
-		draw_image_to_cell(data, data->tile, x, y);
-		data->map[y][x] = '0';
+		data->map[y][x] = '4';
 	}
 }
 
@@ -69,22 +70,41 @@ void	move_enemy(t_data *data, char dir, int x, int y)
 {
 	if (dir == 'w' && data->map[y - 1][x] == '0')
 	{
-		data->map[y - 1][x] = '4';
+		if (x == data->x && y - 1 == data->y)
+			return ;
+		data->map[y - 1][x] = '7';
 		draw_image_to_cell(data, data->enemy[0], x, y - 1);
+		data->map[y][x] = '0';
+		draw_image_to_cell(data, data->tile, x, y);
 	}
 	else if (dir == 'a' && data->map[y][x - 1] == '0')
 	{
-		data->map[y][x - 1] = '4';
+		if (x - 1 == data->x && y == data->y)
+			return ;
+		data->map[y][x - 1] = '7';
 		draw_image_to_cell(data, data->enemy[0], x - 1, y);
+		data->map[y][x] = '0';
+		draw_image_to_cell(data, data->tile, x, y);
 	}
 	else if (dir == 's' && data->map[y + 1][x] == '0')
 	{
-		data->map[y + 1][x] = '4';
+		if (x == data->x && y + 1 == data->y)
+			return ;
+		data->map[y + 1][x] = '7';
 		draw_image_to_cell(data, data->enemy[0], x, y + 1);
+		data->map[y][x] = '0';
+		draw_image_to_cell(data, data->tile, x, y);
 	}
 	else if (dir == 'd' && data->map[y][x + 1] == '0')
 	{
-		data->map[y][x + 1] = '4';
+		if (x + 1 == data->x && y == data->y)
+			return ;
+		data->map[y][x + 1] = '7';
 		draw_image_to_cell(data, data->enemy[0], x + 1, y);
+		data->map[y][x] = '0';
+		draw_image_to_cell(data, data->tile, x, y);
 	}
+	// else 
+	// 	data->map[y][x] = '4';
+	return ;
 }
