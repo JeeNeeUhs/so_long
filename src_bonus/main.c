@@ -6,7 +6,7 @@
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:39:37 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/19 18:00:49 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/19 19:02:29 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ int	main(int argc, char **argv)
 	init_data(data);
 	draw_map(data);
 	counter(data, 0);
-	srand(time(NULL));
+	// srand(time(NULL));
 	mlx_hook(data->window, 17, 0, expected_exit, data);
 	mlx_key_hook(data->window, key_hook, data);
 	mlx_loop_hook(data->mlx, game_loop, data);
