@@ -6,7 +6,7 @@
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:42:36 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/19 17:42:37 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:14:28 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,18 +46,6 @@ void	destroy_images(t_data *data)
 		mlx_destroy_image(data->mlx, data->character_left);
 	if (data->exit)
 		mlx_destroy_image(data->mlx, data->exit);
-	if (data->enemy)
-	{
-		if (data->enemy[0])
-			mlx_destroy_image(data->mlx, data->enemy[0]);
-		if (data->enemy[1])
-			mlx_destroy_image(data->mlx, data->enemy[1]);
-		if (data->enemy[2])
-			mlx_destroy_image(data->mlx, data->enemy[2]);
-		if (data->enemy[3])
-			mlx_destroy_image(data->mlx, data->enemy[3]);
-		free(data->enemy);
-	}
 }
 
 void	err(t_data *data)

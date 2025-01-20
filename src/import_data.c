@@ -6,7 +6,7 @@
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:40:54 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/20 12:11:59 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:14:44 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,9 +88,6 @@ void	init_data(t_data *data)
 			data->window_height * 100, "so_long");
 	if (!data->window)
 		error_exit(data);
-	data->enemy = malloc(sizeof(void *) * 4);
-	if (!data->enemy)
-		error_exit(data);
 	import_images1(data);
 	import_images2(data);
 	data->character = data->character_right;
@@ -108,7 +105,6 @@ void	init_null(t_data *data)
 	data->character_right = NULL;
 	data->character_left = NULL;
 	data->character = NULL;
-	data->enemy = NULL;
 	data->exit = NULL;
 	data->mlx = NULL;
 	data->window = NULL;
