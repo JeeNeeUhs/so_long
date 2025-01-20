@@ -6,7 +6,7 @@
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:38:57 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/19 17:39:13 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:08:01 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ void	import_images1(t_data *data);
 void	import_images2(t_data *data);
 void	init_map(t_data *data, char *file);
 void	init_data(t_data *data);
+void	init_null(t_data *data);
 
 // import_dfs.c
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);

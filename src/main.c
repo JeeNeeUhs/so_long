@@ -6,7 +6,7 @@
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:39:37 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/19 17:39:37 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:07:53 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,10 +79,7 @@ int	main(int argc, char **argv)
 	data = malloc(sizeof(t_data));
 	if (!data)
 		err(NULL);
-	data->game_loop_counter = 0;
-	data->move_counter = 0;
-	data->window_width = 0;
-	data->window_height = 0;
+	init_null(data);
 	checker(data, argv);
 	init_data(data);
 	draw_map(data);
