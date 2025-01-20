@@ -6,7 +6,7 @@
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:39:37 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/20 12:07:53 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:33:39 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,31 +44,6 @@ void	counter(t_data *data, int plus)
 	free(itoa);
 }
 
-int	game_loop(void *param)
-{
-	t_data	*data;
-	int		x;
-	int		y;
-
-	data = (t_data *)param;
-	if (data->game_loop_counter++ < 100000)
-		return (0);
-	data->game_loop_counter = 0;
-	x = 0;
-	y = 0;
-	while (y < data->window_height)
-	{
-		x = 0;
-		while (x < data->window_width)
-		{
-			enemy_sprite(data, x, y);
-			x++;
-		}
-		y++;
-	}
-	return (0);
-}
-
 int	main(int argc, char **argv)
 {
 	t_data	*data;
@@ -86,7 +61,6 @@ int	main(int argc, char **argv)
 	counter(data, 0);
 	mlx_hook(data->window, 17, 0, expected_exit, data);
 	mlx_key_hook(data->window, key_hook, data);
-	mlx_loop_hook(data->mlx, game_loop, data);
 	mlx_loop(data->mlx);
 	return (0);
 }

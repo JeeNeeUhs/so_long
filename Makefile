@@ -19,7 +19,6 @@ SRC_FILES = $(SRC_DIR)/main.c \
 			$(SRC_DIR)/import_dfs.c\
 			$(SRC_DIR)/keys.c\
 			$(SRC_DIR)/pathfinder.c\
-			$(SRC_DIR)/sprite.c\
 			$(SRC_DIR)/utils.c\
 
 BONUS_FILES = $(BONUS_DIR)/main_bonus.c \

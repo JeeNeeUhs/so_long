@@ -6,7 +6,7 @@
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:38:57 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/20 12:12:08 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:18:22 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,10 +110,6 @@ int		key_hook(int keycode, void *param);
 // pathfinder.c
 int		is_valid(t_dfs *data, int x, int y);
 int		dfs(t_dfs *d);
-
-// sprite.c
-void	enemy_sprite(t_data *data, int x, int y);
-void	enemy_sprite2(t_data *data, int x, int y);
 
 // utils.c
 char	*ft_itoa(long n);
