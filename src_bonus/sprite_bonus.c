@@ -6,7 +6,7 @@
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:42:19 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/20 11:25:31 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 11:33:17 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	enemy_sprite(t_data *data, int x, int y)
 {
-	int random;
+	int	random;
 
 	if (data->map[y][x] == '4')
 	{
@@ -85,7 +85,6 @@ void	move_enemy(t_data *data, char dir, int x, int y)
 	}
 	else
 		move_enemy2(data, dir, x, y);
-	
 	return ;
 }
 
