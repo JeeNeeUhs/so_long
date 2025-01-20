@@ -22,7 +22,6 @@ SRC_FILES = $(SRC_DIR)/main.c \
 			$(SRC_DIR)/sprite.c\
 			$(SRC_DIR)/utils.c\
 
-
 BONUS_FILES = $(BONUS_DIR)/main_bonus.c \
 			$(GNL_DIR)/get_next_line.c \
 			$(GNL_DIR)/get_next_line_utils.c \
@@ -38,22 +37,6 @@ BONUS_FILES = $(BONUS_DIR)/main_bonus.c \
 			$(BONUS_DIR)/pathfinder_bonus.c\
 			$(BONUS_DIR)/sprite_bonus.c\
 			$(BONUS_DIR)/utils_bonus.c\
-
-# BONUS_FILES = $(BONUS_DIR)/main.c\
-# 			$(GNL_DIR)/get_next_line.c\
-# 			$(GNL_DIR)/get_next_line_utils.c\
-# 			$(BONUS_DIR)/check_map.c\
-# 			$(BONUS_DIR)/check_paths.c\
-# 			$(BONUS_DIR)/check_pos.c\
-# 			$(BONUS_DIR)/draw.c\
-# 			$(BONUS_DIR)/error.c\
-# 			$(BONUS_DIR)/find_in_map.c\
-# 			$(BONUS_DIR)/import_data.c\
-# 			$(BONUS_DIR)/import_dfs.c\
-# 			$(BONUS_DIR)/keys.c\
-# 			$(BONUS_DIR)/pathfinder.c\
-# 			$(BONUS_DIR)/sprite.c\
-# 			$(BONUS_DIR)/utils.c\
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
