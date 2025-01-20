@@ -6,7 +6,7 @@
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 12:54:03 by ahekinci          #+#    #+#             */
-/*   Updated: 2024/11/12 10:16:46 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:43:37 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1024
+#  define BUFFER_SIZE 1
 # endif
 
 # include <stddef.h>
