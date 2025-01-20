@@ -6,7 +6,7 @@
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:38:57 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/20 11:12:40 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 11:26:08 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,7 @@ int		dfs(t_dfs *d);
 void	enemy_sprite(t_data *data, int x, int y);
 void	enemy_sprite2(t_data *data, int x, int y);
 void	move_enemy(t_data *data, char dir, int x, int y);
+void	move_enemy2(t_data *data, char dir, int x, int y);
 
 // utils.c
 char	*ft_itoa(long n);
