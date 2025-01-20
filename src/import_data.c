@@ -6,7 +6,7 @@
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:40:54 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/20 12:08:11 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:11:59 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,22 +49,6 @@ void	import_images2(t_data *data)
 	int	img_width;
 	int	img_height;
 
-	data->enemy[0] = mlx_xpm_file_to_image(data->mlx,
-			"textures/enemy0.xpm", &img_width, &img_height);
-	if (!data->enemy[0])
-		error_exit(data);
-	data->enemy[1] = mlx_xpm_file_to_image(data->mlx,
-			"textures/enemy1.xpm", &img_width, &img_height);
-	if (!data->enemy[1])
-		error_exit(data);
-	data->enemy[2] = mlx_xpm_file_to_image(data->mlx,
-			"textures/enemy2.xpm", &img_width, &img_height);
-	if (!data->enemy[2])
-		error_exit(data);
-	data->enemy[3] = mlx_xpm_file_to_image(data->mlx,
-			"textures/enemy3.xpm", &img_width, &img_height);
-	if (!data->enemy[3])
-		error_exit(data);
 	data->exit = mlx_xpm_file_to_image(data->mlx,
 			"textures/exit.xpm", &img_width, &img_height);
 	if (!data->exit)

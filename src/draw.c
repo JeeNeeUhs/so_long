@@ -6,7 +6,7 @@
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:40:26 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/19 17:40:33 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:12:43 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,6 @@ void	draw_map_if(t_data *data, int x, int y)
 	}
 	else if (data->map[y][x] == 'E')
 		draw_image_to_cell(data, data->exit, x, y);
-	else if (data->map[y][x] == 'F')
-	{
-		draw_image_to_cell(data, data->enemy[0], x, y);
-		data->map[y][x] = '4';
-	}
 	else if (data->map[y][x] == '0')
 		draw_image_to_cell(data, data->tile, x, y);
 }
@@ -73,6 +68,4 @@ void	draw_original_block(t_data *data, int x, int y)
 		draw_image_to_cell(data, data->berry, x, y);
 	else if (data->map[y][x] == 'E')
 		draw_image_to_cell(data, data->exit, x, y);
-	else if (data->map[y][x] == 'F')
-		draw_image_to_cell(data, data->tile, x, y);
 }

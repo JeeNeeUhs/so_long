@@ -6,7 +6,7 @@
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:38:57 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/20 12:08:01 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:12:08 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ typedef struct s_data
 	void	*character_right;
 	void	*character_left;
 	void	*character;
-	void	**enemy;
 	void	*exit;
 	int		game_loop_counter;
 	long	move_counter;

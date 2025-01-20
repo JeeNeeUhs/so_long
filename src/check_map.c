@@ -6,7 +6,7 @@
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:38:10 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/19 17:38:11 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:10:11 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,7 @@ int	check_map(t_data *data, int start, int exit_c, int collectible)
 				exit_c++;
 			else if (data->map[y][x] == 'C')
 				collectible++;
-			else if (data->map[y][x] != '1' && data->map[y][x] != '0' &&
-					data->map[y][x] != 'F')
+			else if (data->map[y][x] != '1' && data->map[y][x] != '0')
 				return (0);
 			x++;
 		}

@@ -6,7 +6,7 @@
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:42:45 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/19 17:42:46 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:10:59 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	dfs(t_dfs *d)
 
 	if (d->x == d->goal_x && d->y == d->goal_y)
 		return (1);
-	if (d->map[d->y][d->x] == '1' || d->map[d->y][d->x] == 'F')
+	if (d->map[d->y][d->x] == '1')
 		return (0);
 	d->map[d->y][d->x] = '1';
 	i = 0;
