@@ -6,7 +6,7 @@
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:38:57 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/20 11:33:29 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 11:36:24 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,6 +112,7 @@ int		is_valid(t_dfs *data, int x, int y);
 int		dfs(t_dfs *d);
 
 // sprite.c;
+void	enemy_sprite(t_data *data, int x, int y);
 void	enemy_sprite2(t_data *data, int x, int y);
 void	move_enemy(t_data *data, char dir, int x, int y);
 void	move_enemy2(t_data *data, char dir, int x, int y);
