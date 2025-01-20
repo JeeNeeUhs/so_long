@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pathfinder.c                                       :+:      :+:    :+:   */
+/*   pathfinder_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:42:45 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/19 17:42:46 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 11:17:51 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
 int	is_valid(t_dfs *data, int x, int y)
 {

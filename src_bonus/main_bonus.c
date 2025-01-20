@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   main_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:39:37 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/19 19:02:29 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 11:17:47 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minilibx-linux/mlx.h"
 #include <stdlib.h>
-#include "so_long.h"
+#include "so_long_bonus.h"
 #include <time.h>
 
 int	key_hook(int keycode, void *param)

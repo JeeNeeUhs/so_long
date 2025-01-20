@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sprite.c                                           :+:      :+:    :+:   */
+/*   sprite_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:42:19 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/19 19:02:16 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 11:17:59 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 #include <stdlib.h>
 
 void	enemy_sprite(t_data *data, int x, int y)

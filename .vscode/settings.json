@@ -3,6 +3,8 @@
         "get_next_line.h": "c",
         "so_long.h": "c",
         "fcntl.h": "c",
-        "so_long_bonus.h": "c"
+        "so_long_bonus.h": "c",
+        "mlx.h": "c",
+        "unistd.h": "c"
     }
 }

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   import_dfs.c                                       :+:      :+:    :+:   */
+/*   import_dfs_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:42:02 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/19 17:42:05 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 11:17:39 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 #include <stdlib.h>
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)

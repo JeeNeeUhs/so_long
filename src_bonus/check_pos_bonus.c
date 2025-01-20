@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_pos.c                                        :+:      :+:    :+:   */
+/*   check_pos_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:39:54 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/19 19:08:03 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 11:17:20 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
 int	check_wall(t_data *data, char dir)
 {

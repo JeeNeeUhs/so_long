@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   draw.c                                             :+:      :+:    :+:   */
+/*   draw_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahekinci <ahekinci@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 17:40:26 by ahekinci          #+#    #+#             */
-/*   Updated: 2025/01/19 17:40:33 by ahekinci         ###   ########.fr       */
+/*   Updated: 2025/01/20 11:17:24 by ahekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 #include "minilibx-linux/mlx.h"
 #include "get_next_line/get_next_line.h"
 
